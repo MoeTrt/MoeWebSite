@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Sujet</title>
+    <!-- Lien vers Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Mon site web</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="menu-home">Accueil</a></li>
+                <li><a href="page1.html" id="menu-page1">Page 1</a></li>
+                <li><a href="page2.html" id="menu-page2">Page 2</a></li>
+            </ul>
+        </nav>
+        <!-- Menu Langue -->
+        <div class="menu-language">
+            <label for="language">Langue :</label>
+            <select id="language" name="language">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+                <option value="es">Espagnol</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <h2 id="subtitle">Sous-titre</h2>
+        <p id="paragraph">Voici un paragraphe aligné au centre.</p>
+        <div class="image-gallery">
+            <img src="P1020563.JPG" alt="Image 1 - Noir et Blanc" class="img-bw">
+            <img src="cowboy-bebop-spike-et-faye-1400362.png" alt="Image 2 - Sépia" class="img-sepia">
+            <img src="images.jpeg" alt="Image 3 - Flou" class="img-blur">
+        </div>
+    </main>
+    <footer>
+        <p id="footer-text">Crée par Moe Triquet</p>
+    </footer>
+
+    <script>
+        // Contenus des textes pour chaque langue
+        const translations = {
+            fr: {
+                title: "Mon site web",
+                home: "Accueil",
+                page1: "Page 1",
+                page2: "Page 2",
+                subtitle: "Sous-titre",
+                paragraph: "Voici un paragraphe aligné au centre.",
+                footer: "Crée par Moe Triquet"
+            },
+            en: {
+                title: "My Website",
+                home: "Home",
+                page1: "Page 1",
+                page2: "Page 2",
+                subtitle: "Subtitle",
+                paragraph: "Here is a centered paragraph.",
+                footer: "Created by Moe Triquet"
+            },
+            es: {
+                title: "Mi Sitio Web",
+                home: "Inicio",
+                page1: "Página 1",
+                page2: "Página 2",
+                subtitle: "Subtítulo",
+                paragraph: "Aquí hay un párrafo centrado.",
+                footer: "Creado por Moe Triquet"
+            }
+        };
+
+        // Fonction pour changer la langue
+        document.getElementById("language").addEventListener("change", function() {
+            const selectedLang = this.value; // Récupère la langue sélectionnée
+            const content = translations[selectedLang]; // Récupère les traductions correspondantes
+
+            // Mise à jour des textes
+            document.getElementById("main-title").textContent = content.title;
+            document.getElementById("menu-home").textContent = content.home;
+            document.getElementById("menu-page1").textContent = content.page1;
+            document.getElementById("menu-page2").textContent = content.page2;
+            document.getElementById("subtitle").textContent = content.subtitle;
+            document.getElementById("paragraph").textContent = content.paragraph;
+            document.getElementById("footer-text").textContent = content.footer;
+        });
+    </script>
+</body>
+</html>

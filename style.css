@@ -1,0 +1,83 @@
+/* Importation de la police Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* Bleu clair */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Menu Langue */
+.menu-language {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.img-bw {
+    filter: grayscale(100%);
+}
+
+.img-sepia {
+    filter: sepia(100%);
+}
+
+.img-blur {
+    filter: blur(5px);
+}
+
+/* Pied de page */ 
+footer {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
